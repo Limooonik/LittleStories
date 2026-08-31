@@ -1,0 +1,92 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios26.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name Limooonik
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+import AppIntents
+import Foundation
+import Swift
+import SwiftUI
+import WidgetKit
+import _AppIntents_SwiftUI
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct LittleStoriesGonfig {
+  public var bgColor: SwiftUICore.Color
+  public var planetGradient: SwiftUICore.Gradient
+  public var roundColor1: SwiftUICore.Color
+  public var roundColor2: SwiftUICore.Color
+  public var roundColor3: SwiftUICore.Color
+  public var roundColor4: SwiftUICore.Color
+  public var roundColor5: SwiftUICore.Color
+  public var roundOpacity1: CoreFoundation.CGFloat
+  public var roundOpacity2: CoreFoundation.CGFloat
+  public var roundOpacity3: CoreFoundation.CGFloat
+  public var roundOpacity4: CoreFoundation.CGFloat
+  public var roundOpacity5: CoreFoundation.CGFloat
+  public var starsColor: SwiftUICore.Color
+  public var starsOpacity: CoreFoundation.CGFloat
+  public init()
+}
+public struct LimooonikIntentsPackage : AppIntents.AppIntentsPackage {
+  public init()
+}
+@_Concurrency.MainActor @preconcurrency public struct LittleStoriesLayout : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var e: Limooonik.Provider.Entry
+  @_Concurrency.MainActor @preconcurrency public init(e: Limooonik.Provider.Entry)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9Limooonik19LittleStoriesLayoutV4bodyQrvp", 0) __
+}
+public struct LittleStoriesState {
+}
+@_Concurrency.MainActor @preconcurrency public struct LittleStoriesView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var e: Limooonik.Provider.Entry
+  @_Concurrency.MainActor @preconcurrency public init(e: Limooonik.Provider.Entry)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9Limooonik17LittleStoriesViewV4bodyQrvp", 0) __
+}
+public struct LittleStoriesEntry : WidgetKit.TimelineEntry {
+  public let date: Foundation.Date
+  public let a: Limooonik.LittleStoriesState
+  public let config: Limooonik.LittleStoriesGonfig
+  public init(date: Foundation.Date, state: Limooonik.LittleStoriesState, config: Limooonik.LittleStoriesGonfig)
+}
+public struct ReloadLittleStoriesIntent : AppIntents.AppIntent {
+  public static var title: Foundation.LocalizedStringResource {
+    get
+  }
+  public static var openAppWhenRun: Swift.Bool {
+    get
+  }
+  public init()
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func perform() async throws -> some AppIntents.IntentResult
+  
+  #endif
+  public typealias PerformResult = @_opaqueReturnTypeOf("$s9Limooonik25ReloadLittleStoriesIntentV7performQryYaKF", 0) __
+  public typealias SummaryContent = @_opaqueReturnTypeOf("$s10AppIntents0A6IntentPAAE16parameterSummaryQrvpZ", 0) __<Limooonik.ReloadLittleStoriesIntent>
+}
+public struct Provider : WidgetKit.TimelineProvider {
+  public let config: Limooonik.LittleStoriesGonfig
+  public init(config: Limooonik.LittleStoriesGonfig)
+  public func placeholder(in context: Limooonik.Provider.Context) -> Limooonik.LittleStoriesEntry
+  public func getSnapshot(in context: Limooonik.Provider.Context, completion: @escaping (Limooonik.LittleStoriesEntry) -> Swift.Void)
+  public func getTimeline(in context: Limooonik.Provider.Context, completion: @escaping (WidgetKit.Timeline<Limooonik.LittleStoriesEntry>) -> Swift.Void)
+  public typealias Entry = Limooonik.LittleStoriesEntry
+}
+public struct TogglePlayPauseIntent : AppIntents.AppIntent {
+  public static var title: Foundation.LocalizedStringResource
+  public init()
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func perform() async throws -> some AppIntents.IntentResult
+  
+  #endif
+  public typealias PerformResult = @_opaqueReturnTypeOf("$s9Limooonik21TogglePlayPauseIntentV7performQryYaKF", 0) __
+  public typealias SummaryContent = @_opaqueReturnTypeOf("$s10AppIntents0A6IntentPAAE16parameterSummaryQrvpZ", 0) __<Limooonik.TogglePlayPauseIntent>
+}
+extension Limooonik.LittleStoriesLayout : Swift.Sendable {}
+extension Limooonik.LittleStoriesView : Swift.Sendable {}
